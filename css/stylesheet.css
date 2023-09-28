@@ -3,13 +3,17 @@ ul{
     list-style-type:none;
 }
 
-.menytekst{
+.list_with_point{
+    list-style: circle;
+}
+
+nav{
     border-style: solid;
     border-color: black;
     border-width:5px ;
     width: 80px;
     padding: 10px;
-    float: left;
+    float: top;
     margin:5px;
     background-color: beige;
     text-align:center

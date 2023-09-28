@@ -1,0 +1,26 @@
+ul{
+    list-style-type:none;
+}
+
+.menytekst{
+    border-style: solid;
+    border-color: black;
+    border-width:5px ;
+    width: 80px;
+    padding: 10px;
+    float: left;
+    margin:5px;
+    background-color: beige;
+    text-align:center
+}
+
+.a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: size 14px;
+    text-decoration:none;
+}
+
+.a:hover{
+    color: red;
+    text-decoration: underline;
+}

@@ -2,17 +2,16 @@
    box-sizing: border-box;
 }
 
-/* Grid container used as a container for all semantic elements: head, article
+/* Grid container used as a container for all semantic elements: head, main
    aside, footer, etc. */
-.main-container {
+.main-layout {
     display: grid;
     margin: 0 auto;
     background-color: #707070;
-    border-radius: 5px;
-    grid-template-columns: auto 1000px auto;
+    grid-template-columns: auto 1250px auto;
     grid-template-areas:
             "side_left header side_right"
-            "side_left article side_right"
+            "side_left main side_right"
             "side_left footer side_right";
     gap: 20px;
 }
@@ -23,8 +22,8 @@
     background-color: white;
 }
 
-.article {
-    grid-area: article;
+.main-container {
+    grid-area: main;
     background-color: white;
 
 }
@@ -42,6 +41,16 @@
     background-color: white;
 }
 
+@media (max-width: 1250px) {
+    .main-layout {
+        grid-template-columns: 100%;
+        grid-template-areas:
+                "header"
+                "main"
+                "footer";
+        /*justify-content: center;*/
+    }
+}
 
 /*ul{
     list-style-type:none;

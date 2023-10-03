@@ -1,13 +1,57 @@
+* {
+   box-sizing: border-box;
+}
 
-ul{
+/* Grid container used as a container for all semantic elements: head, article
+   aside, footer, etc. */
+.main-container {
+    display: grid;
+    margin: 0 auto;
+    background-color: #707070;
+    border-radius: 5px;
+    grid-template-columns: auto 1000px auto;
+    grid-template-areas:
+            "side_left header side_right"
+            "side_left article side_right"
+            "side_left footer side_right";
+    gap: 20px;
+}
+
+/* All direct children of a grid-container becomes grid-items */
+.main-header {
+    grid-area: header;
+    background-color: white;
+}
+
+.article {
+    grid-area: article;
+    background-color: white;
+
+}
+
+.side_left {
+    grid-area: side_left;
+}
+
+.side_right {
+    grid-area: side_right;
+}
+
+.main-footer {
+    grid-area: footer;
+    background-color: white;
+}
+
+
+/*ul{
     list-style-type:none;
-}
+}*/
 
-.list_with_point{
+/*.list_with_point{
     list-style: circle;
-}
+}*/
 
-nav{
+/*nav{
     border-style: solid;
     border-color: black;
     border-width:5px ;
@@ -17,15 +61,15 @@ nav{
     margin:5px;
     background-color: beige;
     text-align:center
-}
+}*/
 
-.a{
+/*.a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font: size 14px;
     text-decoration:none;
-}
+}*/
 
-.a:hover{
+/*.a:hover{
     color: red;
     text-decoration: underline;
-}
+}*/

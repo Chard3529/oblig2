@@ -128,8 +128,6 @@ nav a:hover {
     grid-template-areas:
             "picture information_header "
             "picture information ";
-            
-    
 }
 
 .picture {

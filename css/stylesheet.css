@@ -18,7 +18,8 @@ ul {
 
 a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration:#ff4e00;
+    color: #ff4e00;
+    text-decoration: none;
 }
 
 a:hover {

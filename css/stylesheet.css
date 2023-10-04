@@ -18,7 +18,7 @@ ul {
 
 a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration:none;
+    text-decoration:#ff4e00;
 }
 
 a:hover {
@@ -43,9 +43,6 @@ nav a:hover {
     text-decoration: none;
 }
 
-article {
-
-}
 
 .image {
     max-width: 100%;

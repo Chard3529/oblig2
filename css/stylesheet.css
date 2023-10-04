@@ -127,8 +127,7 @@ ul {
     grid-area: information_header;
 }
 
-/* Flexbox usd for navigation layout. Notation <element1> > <element2>
-   means <element2> within <element1>*/
+/* Flexbox usd for navigation layout. */
    .navigation-links {
     display: flex;
     flex-direction: row;
@@ -145,6 +144,7 @@ ul {
     align-content: center;
 }
 
+/* Notation <element1> > <element2> means <element2> within <element1> */
 .contact-info > li {
     padding: 10px;
 }

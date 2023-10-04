@@ -92,11 +92,11 @@ ul {
     padding: 20px;
 }
 
-.side_left {
+.side-left {
     grid-area: side_left;
 }
 
-.side_right {
+.side-right {
     grid-area: side_right;
 }
 
@@ -107,7 +107,7 @@ ul {
 
 
 /* Grid for display of picture of the author and description of the author*/
-.author-layout {
+.author-container {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 20% 80%;
@@ -123,7 +123,7 @@ ul {
 .information{
     grid-area: information;
 }
-.information_header{
+.information-header{
     grid-area: information_header;
 }
 

@@ -1,31 +1,82 @@
+/* Code for use of grid for realizing our layout are inspired from section
+   "A responsive layout with 1 to 3 fluid columns using grid-template-areas" in:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids */
+
 * {
+    /* Padding or border-width is not added on top of the element
+       width. Default is "content-box" */
    box-sizing: border-box;
+}
+
+body {
+    background-color: #707070;
+}
+
+ul {
+    list-style-type:none;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration:none;
+}
+
+a:hover {
+    color: #d20d0d;
+    text-decoration: underline;
+}
+
+nav {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 5px ;
+    background-color: #333333;
+    text-align:center
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+article {
+
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Grid container used as a container for all semantic elements: head, main
    aside, footer, etc. */
 .main-layout {
     display: grid;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
     background-color: #707070;
     grid-template-columns: auto 1250px auto;
+    grid-template-rows: min-content min-content auto;
     grid-template-areas:
             "side_left header side_right"
             "side_left main side_right"
             "side_left footer side_right";
-    gap: 20px;
+    gap: 10px;
 }
 
-/* All direct children of a grid-container becomes grid-items */
+/* All direct elements of a grid-container becomes grid-items */
 .main-header {
     grid-area: header;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .main-container {
     grid-area: main;
-    background-color: white;
-
+    background-color: #ffffff;
 }
 
 .side_left {
@@ -38,9 +89,33 @@
 
 .main-footer {
     grid-area: footer;
-    background-color: white;
+    background-color: #ffffff;
 }
 
+/* Flexbox usd for navigation layout. Notation <element1> > <element2>
+   means <element2> within <element1>*/
+.navigation-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Flexbox used for contact information  layout */
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.contact-info > li {
+    padding: 10px;
+}
+
+/* Media query. Page content(header, main, footer) will use 100% of screen
+   width on any screen or device <= 1250px */
 @media (max-width: 1250px) {
     .main-layout {
         grid-template-columns: 100%;
@@ -52,33 +127,8 @@
     }
 }
 
-/*ul{
-    list-style-type:none;
-}*/
-
-/*.list_with_point{
-    list-style: circle;
-}*/
-
-/*nav{
-    border-style: solid;
-    border-color: black;
-    border-width:5px ;
-    width: 80px;
-    padding: 10px;
-    float: top;
-    margin:5px;
-    background-color: beige;
-    text-align:center
-}*/
-
-/*.a{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font: size 14px;
-    text-decoration:none;
-}*/
-
-/*.a:hover{
-    color: red;
-    text-decoration: underline;
-}*/
+@media (max-width: 650px) {
+    .contact-info {
+        flex-direction: column;
+    }
+}

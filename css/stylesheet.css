@@ -113,6 +113,10 @@ article {
 .contact-info > li {
     padding: 10px;
     color: #d20d0d;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 5px ;
+    background-color: #333333;
 }
 
 /* Media query. Page content(header, main, footer) will use 100% of screen

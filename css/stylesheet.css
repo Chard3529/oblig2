@@ -19,7 +19,7 @@ ul {
 }
 
 .list_with_point {
-    list-style-type:circle;
+    list-style-type:disc;
 }
 
 a {
@@ -139,3 +139,11 @@ nav a:hover {
         flex-direction: column;
     }
 }
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 20px;
+  }

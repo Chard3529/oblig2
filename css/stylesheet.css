@@ -120,6 +120,27 @@ nav a:hover {
 
 }
 
+.author-layout {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+            "picture information_header "
+            "picture information ";
+            
+    
+}
+
+.picture {
+    grid-area: picture;
+}
+.information{
+    grid-area: information;
+}
+.information_header{
+    grid-area: information_header;
+}
+
 /* Media query. Page content(header, main, footer) will use 100% of screen
    width on any screen or device <= 1250px */
 @media (max-width: 1250px) {

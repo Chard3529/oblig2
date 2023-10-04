@@ -16,6 +16,10 @@ ul {
     list-style-type:none;
 }
 
+.list_with_point {
+    list-style-type:circle;
+}
+
 a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ff4e00;

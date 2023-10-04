@@ -7,37 +7,39 @@
        width. Default is "content-box" */
    box-sizing: border-box;
 }
-
+/* Sets the style for the whole document */
 body {
     background-color: #707070;
     font-family: serif;
     font-size: 15px;
 }
 
-ul {
-    list-style-type:none;
+h1 {
+    font-size: 40px;
 }
 
-.list_with_point {
-    list-style-type:disc;
+h2 {
+    font-size: 20px;
 }
 
-a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #d20d0d;
-    text-decoration: underline;
-}
-
+/* The stylig for the menu items */
 nav {
     border-style: solid;
     border-color: #000000;
     border-width: 5px ;
     background-color: #333333;
     text-align:center
+}
+
+/*removes underline from links*/
+a {
+    text-decoration: none;
+}
+
+/*Changes colour when you hover over links */
+a:hover {
+    color: #d20d0d;
+    text-decoration: underline;
 }
 
 nav a {
@@ -49,6 +51,13 @@ nav a:hover {
     text-decoration: none;
 }
 
+ul {
+    list-style-type:none;
+}
+
+.list_with_point {
+    list-style-type:disc;
+}
 
 .image {
     max-width: 100%;
@@ -96,8 +105,31 @@ nav a:hover {
     background-color: #ffffff;
 }
 
-/* Flexbox usd for navigation layout */
-.navigation-links {
+
+/* Grid for display of picture of the author and description of the author*/
+.author-layout {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+            "picture information_header "
+            "picture information ";
+}
+
+/* The grid items in the author grid. */
+.picture {
+    grid-area: picture;
+}
+.information{
+    grid-area: information;
+}
+.information_header{
+    grid-area: information_header;
+}
+
+/* Flexbox usd for navigation layout. Notation <element1> > <element2>
+   means <element2> within <element1>*/
+   .navigation-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -113,28 +145,8 @@ nav a:hover {
     align-content: center;
 }
 
-/* Notation <element1> > <element2> means <element2> within <element1> */
 .contact-info > li {
     padding: 10px;
-}
-
-.author-layout {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 20% 80%;
-    grid-template-areas:
-            "picture information_header "
-            "picture information ";
-}
-
-.picture {
-    grid-area: picture;
-}
-.information{
-    grid-area: information;
-}
-.information_header{
-    grid-area: information_header;
 }
 
 /* Media query. Page content(header, main, footer) will use 100% of screen
@@ -156,10 +168,3 @@ nav a:hover {
     }
 }
 
-h1 {
-    font-size: 40px;
-}
-
-h2 {
-    font-size: 20px;
-  }
